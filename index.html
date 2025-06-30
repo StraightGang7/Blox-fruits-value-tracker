@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <title>Blox Fruits Value Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Blox Fruits Value Tracker</h1>
+  <table>
+    <tr>
+      <th>Frugt</th>
+      <th>Sidste Værdi</th>
+      <th>Ny Værdi</th>
+      <th>Trend</th>
+    </tr>
+    <tr>
+      <td>Dough</td>
+      <td id="doughPrev">10</td>
+      <td><input id="doughNow" type="number" value="10"></td>
+      <td id="doughTrend">➡️</td>
+    </tr>
+    <tr>
+      <td>Dragon</td>
+      <td id="dragonPrev">12</td>
+      <td><input id="dragonNow" type="number" value="12"></td>
+      <td id="dragonTrend">➡️</td>
+    </tr>
+    <tr>
+      <td>Leopard</td>
+      <td id="leopardPrev">11</td>
+      <td><input id="leopardNow" type="number" value="11"></td>
+      <td id="leopardTrend">➡️</td>
+    </tr>
+  </table>
+
+  <button onclick="updateTrends()">Opdater Trends</button>
+
+  <script>
+    function updateTrends() {
+      updateFruit('dough');
+      updateFruit('dragon');
+      updateFruit('leopard');
+    }
+
+    function updateFruit(fruit) {
+      let prev = parseFloat(document.getElementById(fruit + 'Prev').innerText);
+      let now = parseFloat(document.getElementById(fruit + 'Now').value);
+      let trend = '➡️';
+      if (now > prev) trend = '⬆️';
+      else if (now < prev) trend = '⬇️';
+
+      document.getElementById(fruit + 'Trend').innerText = trend;
+      document.getElementById(fruit + 'Prev').innerText = now;
+    }
+  </script>
+</body>
+</html>
