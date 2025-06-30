@@ -1,82 +1,99 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Blox Fruits Value Tracker</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f0f4f8;
+      background: #0d1117;
+      color: #c9d1d9;
       padding: 20px;
     }
     h1 {
-      color: #333;
+      color: #58a6ff;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      background: #fff;
+      margin-top: 20px;
     }
     th, td {
       padding: 10px;
-      border: 1px solid #ddd;
-      text-align: center;
+      border-bottom: 1px solid #30363d;
+      text-align: left;
     }
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
+    th {
+      background: #161b22;
+    }
+    tr:nth-child(even) {
+      background: #161b22;
+    }
+    .up {
+      color: #0acf83;
+    }
+    .down {
+      color: #f85149;
     }
   </style>
 </head>
 <body>
   <h1>Blox Fruits Value Tracker</h1>
+  <p>Based on FruityBlox values — June 2025</p>
+
   <table>
-    <tr>
-      <th>Frugt</th>
-      <th>Sidste Værdi</th>
-      <th>Ny Værdi</th>
-      <th>Trend</th>
-    </tr>
-    <tr>
-      <td>Dough</td>
-      <td id="doughPrev">10</td>
-      <td><input id="doughNow" type="number" value="10"></td>
-      <td id="doughTrend">➡️</td>
-    </tr>
-    <tr>
-      <td>Dragon</td>
-      <td id="dragonPrev">12</td>
-      <td><input id="dragonNow" type="number" value="12"></td>
-      <td id="dragonTrend">➡️</td>
-    </tr>
-    <tr>
-      <td>Leopard</td>
-      <td id="leopardPrev">11</td>
-      <td><input id="leopardNow" type="number" value="11"></td>
-      <td id="leopardTrend">➡️</td>
-    </tr>
+    <thead>
+      <tr>
+        <th>Fruit</th>
+        <th>Physical Value</th>
+        <th>Permanent Value</th>
+        <th>Trend</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Dragon East</td><td>860m</td><td>2.3b</td><td class="up">🔼</td></tr>
+      <tr><td>Dragon West</td><td>1b</td><td>2.3b</td><td class="up">🔼</td></tr>
+      <tr><td>Kitsune</td><td>215m</td><td>1.8b</td><td class="up">🔼</td></tr>
+      <tr><td>Yeti</td><td>140m</td><td>1.3b</td><td class="up">🔼</td></tr>
+      <tr><td>Leopard</td><td>55m</td><td>1.3b</td><td class="up">🔼</td></tr>
+      <tr><td>Gravity</td><td>100m</td><td>1.2b</td><td class="up">🔼</td></tr>
+      <tr><td>Control</td><td>20m</td><td>1.1b</td><td class="up">🔼</td></tr>
+      <tr><td>Gas</td><td>80m</td><td>1.1b</td><td class="up">🔼</td></tr>
+      <tr><td>Spirit</td><td>10m</td><td>1.1b</td><td class="down">🔽</td></tr>
+      <tr><td>Creation</td><td>15m</td><td>1b</td><td class="up">🔼</td></tr>
+      <tr><td>Dough</td><td>30m</td><td>1b</td><td class="up">🔼</td></tr>
+      <tr><td>Mammoth</td><td>8m</td><td>1b</td><td class="up">🔼</td></tr>
+      <tr><td>T-Rex</td><td>20m</td><td>1b</td><td class="up">🔼</td></tr>
+      <tr><td>Venom</td><td>8m</td><td>1b</td><td class="up">🔼</td></tr>
+      <tr><td>Shadow</td><td>6.5m</td><td>1b</td><td class="up">🔼</td></tr>
+      <tr><td>Blizzard</td><td>5m</td><td>935m</td><td class="up">🔼</td></tr>
+      <tr><td>Pain</td><td>2m</td><td>915m</td><td class="down">🔽</td></tr>
+      <tr><td>Rumble</td><td>7m</td><td>870m</td><td class="up">🔼</td></tr>
+      <tr><td>Portal</td><td>11m</td><td>840m</td><td class="up">🔼</td></tr>
+      <tr><td>Phoenix</td><td>2.8m</td><td>830m</td><td class="up">🔼</td></tr>
+      <tr><td>Eagle</td><td>5m</td><td>800m</td><td class="up">🔼</td></tr>
+      <tr><td>Sound</td><td>2.5m</td><td>790m</td><td class="up">🔼</td></tr>
+      <tr><td>Spider</td><td>1.5m</td><td>750m</td><td class="down">🔽</td></tr>
+      <tr><td>Love</td><td>1.5m</td><td>705m</td><td class="down">🔽</td></tr>
+      <tr><td>Buddha</td><td>11m</td><td>685m</td><td class="up">🔼</td></tr>
+      <tr><td>Quake</td><td>1m</td><td>625m</td><td class="down">🔽</td></tr>
+      <tr><td>Magma</td><td>1.1m</td><td>540m</td><td class="down">🔽</td></tr>
+      <tr><td>Ghost</td><td>800k</td><td>530m</td><td class="down">🔽</td></tr>
+      <tr><td>Rubber</td><td>700k</td><td>500m</td><td class="down">🔽</td></tr>
+      <tr><td>Light</td><td>800k</td><td>455m</td><td class="down">🔽</td></tr>
+      <tr><td>Diamond</td><td>1.5m</td><td>415m</td><td class="down">🔽</td></tr>
+      <tr><td>Dark</td><td>400k</td><td>380m</td><td class="down">🔽</td></tr>
+      <tr><td>Sand</td><td>420k</td><td>340m</td><td class="down">🔽</td></tr>
+      <tr><td>Ice</td><td>550k</td><td>310m</td><td class="down">🔽</td></tr>
+      <tr><td>Flame</td><td>250k</td><td>220m</td><td class="down">🔽</td></tr>
+      <tr><td>Spike</td><td>180k</td><td>95m</td><td class="down">🔽</td></tr>
+      <tr><td>Smoke</td><td>100k</td><td>63m</td><td class="down">🔽</td></tr>
+      <tr><td>Bomb</td><td>80k</td><td>55m</td><td class="down">🔽</td></tr>
+      <tr><td>Spring</td><td>60k</td><td>45m</td><td class="down">🔽</td></tr>
+      <tr><td>Blade</td><td>50k</td><td>20m</td><td class="down">🔽</td></tr>
+      <tr><td>Spin</td><td>7.5k</td><td>15m</td><td class="down">🔽</td></tr>
+      <tr><td>Rocket</td><td>5k</td><td>10m</td><td class="down">🔽</td></tr>
+    </tbody>
   </table>
-
-  <button onclick="updateTrends()">Opdater Trends</button>
-
-  <script>
-    function updateTrends() {
-      updateFruit('dough');
-      updateFruit('dragon');
-      updateFruit('leopard');
-    }
-
-    function updateFruit(fruit) {
-      let prev = parseFloat(document.getElementById(fruit + 'Prev').innerText);
-      let now = parseFloat(document.getElementById(fruit + 'Now').value);
-      let trend = '➡️';
-      if (now > prev) trend = '⬆️';
-      else if (now < prev) trend = '⬇️';
-
-      document.getElementById(fruit + 'Trend').innerText = trend;
-      document.getElementById(fruit + 'Prev').innerText = now;
-    }
-  </script>
 </body>
 </html>
